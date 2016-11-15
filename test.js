@@ -67,3 +67,18 @@ test('child close', function (t) {
     t.equal(code, 0)
   })
 })
+
+test('child intercepts signal', function (t) {
+  t.plan(1)
+
+  const cwd = path.resolve(__dirname, './fixtures/run')
+  const cli = path.resolve(__dirname, 'cli.js')
+  const spawn = child.spawn('node', [cli, 'run-script', 'nohup'], {cwd: cwd})
+
+  spawn.stdout.on('data', function (data) {
+    t.equal(data.toString().trim(), 'kaboom')
+  })
+
+  process.nextTick(spawn.kill.bind(spawn), 'SIGHUP')
+  spawn.on('close', () => t.pass('closed'))
+})

@@ -6,7 +6,7 @@ const assert = require('assert')
 const mothership = require('mothership')
 const child = require('child_process')
 const npmPath = require('npm-run-path')
-const onExit = require('signal-exit')
+const signals = require('signal-exit').signals()
 const scripts = require('./scripts')
 
 const argv = process.argv.slice(2)
@@ -39,8 +39,8 @@ const spawn = child.spawn(executable, args, {
   stdio: 'inherit'
 })
 
-onExit(function (code, signal) {
-  spawn.kill(signal || 'SIGHUP')
+signals.forEach(function (signal) {
+  process.on(signal, () => spawn.kill(signal))
 })
 
 spawn.on('close', function (code, signal) {

@@ -2,6 +2,7 @@
   "scripts": {
     "start": "foo",
     "sleep-1": "sleep 1",
-    "sleep-10": "pid && sleep 10"
+    "sleep-10": "pid && sleep 10",
+    "nohup": "nohup"
   }
 }
