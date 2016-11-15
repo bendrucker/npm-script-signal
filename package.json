@@ -1,0 +1,39 @@
+{
+  "name": "npm-script-signal",
+  "bin": {
+    "npm-script-signal": "./cli.js"
+  },
+  "version": "0.0.0",
+  "description": "npm script wrapper that passes through signals",
+  "license": "MIT",
+  "repository": "bendrucker/npm-script-signal",
+  "author": {
+    "name": "Ben Drucker",
+    "email": "bvdrucker@gmail.com",
+    "url": "bendrucker.me"
+  },
+  "scripts": {
+    "test": "standard && tape test.js"
+  },
+  "keywords": [
+    "npm",
+    "script",
+    "run",
+    "lifecycle",
+    "signal",
+    "unix"
+  ],
+  "devDependencies": {
+    "is-running": "~2.1.0",
+    "standard": "^7.0.0",
+    "tape": "^4.0.0"
+  },
+  "files": [
+    "*.js"
+  ],
+  "dependencies": {
+    "mothership": "~0.3.0",
+    "npm-run-path": "~2.0.2",
+    "signal-exit": "~3.0.1"
+  }
+}
