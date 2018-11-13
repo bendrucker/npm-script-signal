@@ -1,0 +1,12 @@
+{
+  "groups": {
+    "default": {
+      "packages": [
+        "fixtures/missing-scripts/package.json",
+        "fixtures/run/package.json",
+        "fixtures/start/package.json",
+        "package.json"
+      ]
+    }
+  }
+}
