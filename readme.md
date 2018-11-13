@@ -1,4 +1,4 @@
-# npm-script-signal [![Build Status](https://travis-ci.org/bendrucker/npm-script-signal.svg?branch=master)](https://travis-ci.org/bendrucker/npm-script-signal)
+# npm-script-signal [![Build Status](https://travis-ci.org/bendrucker/npm-script-signal.svg?branch=master)](https://travis-ci.org/bendrucker/npm-script-signal) [![Greenkeeper badge](https://badges.greenkeeper.io/bendrucker/npm-script-signal.svg)](https://greenkeeper.io/)
 
 > npm script wrapper that passes through signals
 
