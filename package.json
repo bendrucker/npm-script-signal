@@ -33,7 +33,7 @@
   ],
   "dependencies": {
     "mothership": "~0.3.0",
-    "npm-run-path": "~2.0.2",
+    "npm-run-path": "~3.0.0",
     "signal-exit": "~3.0.1"
   }
 }
