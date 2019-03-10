@@ -3,7 +3,7 @@
   "bin": {
     "npm-script-signal": "./cli.js"
   },
-  "version": "1.0.1",
+  "version": "2.0.0",
   "description": "npm script wrapper that passes through signals",
   "license": "MIT",
   "repository": "bendrucker/npm-script-signal",
